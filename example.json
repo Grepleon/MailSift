@@ -1,0 +1,18 @@
+{
+  "emails": {
+    "email@domen.i": "<password>",
+    "email-2@domen.i": "<password-2>"
+  },
+  "whitelist-words": [
+
+  ],
+  "whitelist-emails": [
+
+  ],
+  "blacklist-words": [
+
+  ],
+  "blacklist-emails": [
+
+  ]
+}
