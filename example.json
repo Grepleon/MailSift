@@ -1,8 +1,12 @@
 {
-  "emails": {
-    "email@domen.i": "<password>",
-    "email-2@domen.i": "<password-2>"
-  },
+  "accounts": [
+    {
+      "email": "admin@domen.i",
+      "password": "<password>",
+      "imap": "imap.domen.i",
+      "port": 993
+    }
+  ],
   "whitelist-words": [
 
   ],
