@@ -8,5 +8,5 @@ class WeedOut:
     def process_text(self) -> None:
         pass
 
-    def get_text(self) -> str:
+    def to_send(self) -> bool:
         pass
