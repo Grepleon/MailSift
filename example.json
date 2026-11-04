@@ -1,4 +1,16 @@
 {
+  "sender": {
+    "email": "sender@domen.i",
+    "password": "<password>",
+    "imap": "imap.domen.i",
+    "port": 993
+  },
+  "recipient": {
+    "email": "recipient@domen.i",
+    "password": "<password>",
+    "imap": "imap.domen.i",
+    "port": 993
+  },
   "accounts": [
     {
       "email": "admin@domen.i",
