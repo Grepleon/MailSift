@@ -39,6 +39,12 @@ class BlackAndWhiteList:
         for white_word in self.whitelist_words:
             self.send += words.get(white_word, 0)
 
+        if self.sender in self.whitelist_emails:
+            self.send += 5
+
+        if self.sender in self.blacklist_emails:
+            self.send -= 5
+
     def to_send(self) -> bool:
         print("Баллов за \"отправлять\":", self.send)
         print("Баллов за \"мусор\":", self.trash)
