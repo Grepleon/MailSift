@@ -1,13 +1,14 @@
 from fnmatch import fnmatchcase
 from email.utils import parseaddr
 import config, saves
+from weed_out.base import WeedOut
 
 
 def _match(addr: str, patterns: list) -> bool:
     return any(fnmatchcase(addr, p.lower()) for p in patterns)
 
 
-class BlackAndWhiteList:
+class BlackAndWhiteList(WeedOut):
     def __init__(self):
         data = saves.Saves(config.path_to_data).loaded_data
         self.blacklist_words = [w.lower() for w in data["blacklist-words"]]

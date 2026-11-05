@@ -1,8 +1,9 @@
-import weed_out.black_and_white_list as baw
+import weed_out.ai_checker as ai
 
-baw_list = baw.BlackAndWhiteList()
+baw_list = ai.AIChecker()
 baw_list.set_text("""
 
 """, "*.com")
 baw_list.process_text()
 print(baw_list.to_send())
+baw_list.learn(True)
