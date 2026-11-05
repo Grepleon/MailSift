@@ -30,5 +30,15 @@
   ],
   "blacklist-emails": [
 
-  ]
+  ],
+  "ai": {
+    "spam-count": 1,
+    "send-count": 1,
+    "spam-words": {
+      "спам": 1
+    },
+    "send-words": {
+      "привет": 1
+    }
+  }
 }

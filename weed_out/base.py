@@ -10,3 +10,6 @@ class WeedOut:
 
     def to_send(self) -> bool:
         pass
+
+    def learn(self, true_answer: bool):
+        pass
