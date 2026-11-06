@@ -221,5 +221,6 @@ __marimo__/
 
 data.json
 test.py
+test.*.py
 logs.*
 logs.txt

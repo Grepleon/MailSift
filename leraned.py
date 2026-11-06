@@ -36,6 +36,9 @@ if __name__ == "__main__":
 
     print(repr(config.IMAP_USER), len(config.IMAP_PASSWORD))
 
+    p = config.IMAP_PASSWORD
+    print(p[:1] + '... .... .... ...' + p[-1:], len(p))
+
     imap = connect()
     try:
         result = top_senders(imap)
