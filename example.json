@@ -1,22 +1,17 @@
 {
   "sender": {
-    "email": "sender@domen.i",
-    "password": "<password>",
-    "imap": "imap.domen.i",
-    "port": 993
+    "email": "sender@domen.i"
   },
   "recipient": {
-    "email": "recipient@domen.i",
-    "password": "<password>",
-    "imap": "imap.domen.i",
-    "port": 993
+    "email": "recipient@domen.i"
   },
   "accounts": [
     {
-      "email": "admin@domen.i",
-      "password": "<password>",
-      "imap": "imap.domen.i",
-      "port": 993
+      "email": "admin@domen.i"
+    },
+
+    {
+      "email": "user@domen.i"
     }
   ],
   "whitelist-words": [
