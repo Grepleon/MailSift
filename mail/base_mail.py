@@ -1,2 +1,9 @@
 class BaseMail:
-    def __init__(self):
+    def __init__(self, email, password, imap, port):
+        self.email = email
+        self.password = password
+        self.imap = imap
+        self.port = port
+
+    def list_massages(self) -> str:
+        pass
