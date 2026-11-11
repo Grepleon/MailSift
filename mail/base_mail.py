@@ -5,5 +5,5 @@ class BaseMail:
         self.imap = imap
         self.port = port
 
-    def list_massages(self) -> str:
+    def list_messages(self) -> str:
         pass
