@@ -3,7 +3,7 @@ services:
     build: .
     env_file: .env
     environment:
-      PATH_TO_DATA: /data
+      PATH_TO_DATA: /data/data.json
       OUTPUT_FILE: /data/senders.txt
     volumes:
       - ./data:/data
