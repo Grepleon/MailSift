@@ -11,7 +11,9 @@ sender = EmailSender(
     data_sender["email"],
     data_sender["password"],
     data_sender["imap"],
-    data_sender["port"]
+    data_sender["port"],
+    data_sender["smtp"],
+    data_sender["smtp-port"]
 )
 
 for user in data["accounts"]:
@@ -26,9 +28,9 @@ for user in data["accounts"]:
         checker.set_text(letter["body"], letter["from"])
         checker.process_text()
         if checker.to_send():
-            letter["subject"] = "ОТПРАВЛЯТЬ от " + letter["from"]
+            letter["subject"] = "ОТПРАВЛЯТЬ от " + letter["from"] + " из " + user["email"]
         else:
-            letter["subject"] = "БАН! от " + letter["from"]
+            letter["subject"] = "БАН! от " + letter["from"] + " из " + user["email"]
         letter["to"] = data["recipient"]["email"]
 
         sender.send(letter)

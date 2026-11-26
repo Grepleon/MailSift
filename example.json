@@ -3,7 +3,10 @@
     "email": "sender@domen.i",
     "password": "<password>",
     "imap": "imap.domen.i",
-    "port": 993
+    "port": 993,
+    "smtp": "smtp.domen.i",
+    "smtp-ssl": 465,
+    "smtp-port": 587
   },
   "recipient": {
     "email": "recipient@domen.i",
