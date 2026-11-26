@@ -3,7 +3,7 @@ from mail.sender.email_sender import EmailSender
 from mail.email import Email
 from weed_out.ai_checker import AIChecker
 
-file_save = Saves("data.json")
+file_save = Saves("data/data.json")
 data = file_save.loaded_data
 data_sender = data["sender"]
 
