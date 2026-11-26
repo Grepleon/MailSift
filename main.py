@@ -26,8 +26,9 @@ for user in data["accounts"]:
         checker.set_text(letter["body"], letter["from"])
         checker.process_text()
         if checker.to_send():
-            letter["subject"] = "ОТПРАВЛЯТЬ"
+            letter["subject"] = "ОТПРАВЛЯТЬ от " + letter["from"]
         else:
-            letter["subject"] = "БАН!"
+            letter["subject"] = "БАН! от " + letter["from"]
+        letter["to"] = data["recipient"]["email"]
 
         sender.send(letter)
