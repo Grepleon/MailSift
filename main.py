@@ -20,8 +20,8 @@ for user in data["accounts"]:
     account_mail = Email(
         user["email"],
         user["password"],
-        data_sender["imap"],
-        data_sender["port"]
+        user["imap"],
+        user["port"]
     )
     checker = AIChecker()
     for letter in account_mail.list_messages():
