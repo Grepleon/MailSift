@@ -1,9 +1,33 @@
-import weed_out.ai_checker as ai
+from saves import Saves
+from mail.sender.email_sender import EmailSender
+from mail.email import Email
+from weed_out.ai_checker import AIChecker
 
-baw_list = ai.AIChecker()
-baw_list.set_text("""
+file_save = Saves("data.json")
+data = file_save.loaded_data
+data_sender = data["sender"]
 
-""", "*.com")
-baw_list.process_text()
-print(baw_list.to_send())
-baw_list.learn(True)
+sender = EmailSender(
+    data_sender["email"],
+    data_sender["password"],
+    data_sender["imap"],
+    data_sender["port"]
+)
+
+for user in data["accounts"]:
+    account_mail = Email(
+        user["email"],
+        user["password"],
+        data_sender["imap"],
+        data_sender["port"]
+    )
+    checker = AIChecker()
+    for letter in account_mail.list_messages():
+        checker.set_text(letter["body"], letter["from"])
+        checker.process_text()
+        if checker.to_send():
+            letter["subject"] = "ОТПРАВЛЯТЬ"
+        else:
+            letter["subject"] = "БАН!"
+
+        sender.send(letter)
