@@ -3,8 +3,7 @@ services:
     build: .
     env_file: .env
     environment:
-      PATH_TO_DATA: /data/data.json
-      OUTPUT_FILE: /data/senders.txt
+      PATH_TO_DATA: /app/data/data.json
     volumes:
-      - ./data:/data
+      - ./data:/app/data
     restart: unless-stopped
