@@ -1,0 +1,10 @@
+services:
+  mailsift:
+    build: .
+    env_file: .env
+    environment:
+      PATH_TO_DATA: /data
+      OUTPUT_FILE: /data/senders.txt
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
