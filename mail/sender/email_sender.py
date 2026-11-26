@@ -63,7 +63,7 @@ class EmailSender(BaseSender):
 
         return msg
 
-    def send(self, text: dict[str, str]):
+    def send(self, text: dict[str: str]):
         """Отправляет письмо. bcc не попадает в заголовки, только в конверт."""
         msg = self.build_message(text)
 
