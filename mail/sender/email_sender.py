@@ -4,7 +4,7 @@ import ssl
 from email.message import EmailMessage
 from email.utils import formatdate, make_msgid
 
-from mail.base_sender import BaseSender
+from mail.sender.base_sender import BaseSender
 
 
 class EmailSender(BaseSender):
